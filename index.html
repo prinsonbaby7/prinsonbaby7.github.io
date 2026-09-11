@@ -1,1686 +1,1917 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Hectare Acre Real Estate — Kerala's Verified Property Network. Buy, sell and invest with confidence.">
+
+  <title>Hectare Acre Real Estate | Kerala's Verified Property Network</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+    :root {
+      --navy: #0B1F33;
+      --navy-dark: #071624;
+      --navy-light: #102A43;
+      --gold: #C9A45C;
+      --gold-light: #E4C982;
+      --ivory: #F5F1E8;
+      --white: #FFFFFF;
+      --muted: #AAB7C5;
+      --dark-text: #17283A;
+      --line: rgba(201, 164, 92, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 31, 51, 0.96);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 165px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: #edf2f6;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--gold);
+      padding: 10px 19px;
+      border-radius: 50px;
+      color: var(--gold-light) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--navy) !important;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(201, 164, 92, 0.18),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(201, 164, 92, 0.08),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          var(--navy-dark),
+          var(--navy)
+        );
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.12;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.13) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.13) 1px,
+          transparent 1px
+        );
+
+      background-size: 60px 60px;
+
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+    }
+
+    .hero-ring {
+      position: absolute;
+
+      width: 620px;
+      height: 620px;
+
+      right: -230px;
+      top: 50px;
+
+      border: 1px solid rgba(201,164,92,0.25);
+
+      border-radius: 50%;
+    }
+
+    .hero-ring::before,
+    .hero-ring::after {
+      content: "";
+
+      position: absolute;
+
+      border: 1px solid rgba(201,164,92,0.14);
 
-    <meta charset="UTF-8">
+      border-radius: 50%;
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .hero-ring::before {
+      inset: 65px;
+    }
 
-    <title>Hectare Acre Real Estate | Kerala's Verified Property Network</title>
+    .hero-ring::after {
+      inset: 140px;
+    }
 
-    <meta name="description"
-          content="Hectare Acre Real Estate — Kerala's Verified Property Network. Professional property buying, selling, investment, NRI property services, verification and transaction support.">
+    /* Architectural graphic */
 
-    <style>
+    .building-art {
+      position: absolute;
 
-        /* =========================================
-           HECTARE ACRE REAL ESTATE
-           BRAND COLORS
-           Navy  : #0B1F33
-           Gold  : #C9A45C
-           Ivory : #F5F1E8
-           White : #FFFFFF
-        ========================================= */
+      right: 6%;
+      bottom: 0;
 
-        :root {
-            --navy: #0B1F33;
-            --gold: #C9A45C;
-            --ivory: #F5F1E8;
-            --white: #FFFFFF;
+      width: 430px;
+      height: 440px;
 
-            --dark-gold: #A9823D;
-            --text: #293847;
-            --muted: #687582;
-            --light-navy: #102A43;
+      opacity: 0.30;
+    }
 
-            --shadow: 0 12px 35px rgba(11, 31, 51, 0.10);
-        }
+    .building-art span {
+      position: absolute;
 
+      bottom: 0;
 
-        /* =========================================
-           RESET
-        ========================================= */
+      border: 1px solid var(--gold);
+      border-bottom: 0;
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+      background:
+        linear-gradient(
+          to top,
+          rgba(201,164,92,0.16),
+          rgba(201,164,92,0.02)
+        );
+    }
 
+    .building-art .b1 {
+      left: 20px;
+      width: 75px;
+      height: 210px;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--white);
-        }
+    .building-art .b2 {
+      left: 105px;
+      width: 92px;
+      height: 300px;
+    }
 
+    .building-art .b3 {
+      left: 207px;
+      width: 76px;
+      height: 375px;
+    }
 
-        a {
-            color: inherit;
-        }
+    .building-art .b4 {
+      left: 293px;
+      width: 92px;
+      height: 260px;
+    }
 
+    .building-art i {
+      position: absolute;
 
-        /* =========================================
-           HEADER
-        ========================================= */
+      width: 7px;
+      height: 7px;
 
-        header {
-            background: var(--navy);
-            color: var(--white);
-            padding: 12px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
-        }
+      background: var(--gold);
 
+      box-shadow:
+        0 0 18px rgba(201,164,92,0.6);
+    }
 
-        .nav {
-            max-width: 1250px;
-            margin: auto;
+    .hero-content {
+      position: relative;
+      z-index: 3;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+      width: min(820px, 100%);
 
-            gap: 25px;
-        }
+      text-align: center;
 
+      padding: 110px 0 130px;
+    }
 
-        /* LOGO */
+    .eyebrow {
+      display: inline-flex;
 
-        .brand {
-            display: flex;
-            align-items: center;
+      align-items: center;
+      gap: 12px;
 
-            text-decoration: none;
+      margin-bottom: 25px;
 
-            flex-shrink: 0;
-        }
+      color: var(--gold-light);
 
+      text-transform: uppercase;
 
-        .brand img {
-            width: 220px;
-            height: auto;
-            display: block;
-        }
+      letter-spacing: 0.2em;
 
+      font-size: 12px;
+      font-weight: 700;
+    }
 
-        /* NAVIGATION */
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
 
-        nav {
-            display: flex;
-            align-items: center;
+      width: 35px;
+      height: 1px;
 
-            gap: 25px;
-        }
+      background: var(--gold);
+    }
 
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", Georgia, serif;
+    }
 
-        nav a {
-            color: var(--white);
+    h1 {
+      font-size: clamp(45px, 7vw, 82px);
 
-            text-decoration: none;
+      line-height: 1.04;
 
-            font-size: 14px;
-            font-weight: 600;
+      font-weight: 600;
 
-            transition: 0.25s ease;
-        }
+      letter-spacing: -0.03em;
+    }
 
+    h1 span {
+      color: var(--gold-light);
+    }
 
-        nav a:hover {
-            color: var(--gold);
-        }
+    .hero-copy {
+      max-width: 680px;
 
+      margin: 28px auto 36px;
 
-        /* INSTAGRAM NAVIGATION */
+      color: #D4DEE7;
 
-        .nav-instagram {
-            display: inline-flex;
+      font-size: 18px;
+    }
 
-            align-items: center;
-            gap: 8px;
+    .hero-buttons {
+      display: flex;
 
-            padding: 8px 13px;
+      justify-content: center;
 
-            border: 1px solid var(--gold);
+      flex-wrap: wrap;
 
-            border-radius: 30px;
+      gap: 14px;
+    }
 
-            color: var(--gold);
-        }
+    .btn {
+      min-height: 51px;
 
+      padding: 0 25px;
 
-        .nav-instagram:hover {
-            background: var(--gold);
-            color: var(--navy);
-        }
+      border-radius: 50px;
 
+      display: inline-flex;
 
-        .instagram-icon {
-            width: 18px;
-            height: 18px;
+      align-items: center;
 
-            fill: currentColor;
-        }
+      justify-content: center;
 
+      gap: 9px;
 
-        /* =========================================
-           HERO
-        ========================================= */
+      font-size: 14px;
 
-        .hero {
+      font-weight: 700;
 
-            min-height: 700px;
+      transition: 0.3s ease;
+    }
 
-            display: flex;
+    .btn:hover {
+      transform: translateY(-3px);
+    }
 
-            align-items: center;
-            justify-content: center;
+    .btn-gold {
+      background: var(--gold);
 
-            text-align: center;
+      color: var(--navy);
 
-            padding: 80px 20px;
+      box-shadow:
+        0 14px 30px rgba(201,164,92,0.18);
+    }
 
-            background:
-                linear-gradient(
-                    rgba(11, 31, 51, 0.91),
-                    rgba(11, 31, 51, 0.91)
-                ),
-                url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=85")
-                center / cover;
+    .btn-gold:hover {
+      background: var(--gold-light);
+    }
 
-            position: relative;
+    .btn-outline {
+      color: var(--white);
 
-            overflow: hidden;
-        }
+      border: 1px solid rgba(255,255,255,0.30);
 
+      background: rgba(255,255,255,0.03);
+    }
 
-        .hero::after {
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
 
-            content: "";
+    /* =========================================
+       TRUST BAR
+    ========================================= */
 
-            position: absolute;
+    .trust {
+      background: var(--ivory);
+      color: var(--navy);
+    }
 
-            width: 450px;
-            height: 450px;
+    .trust-grid {
+      display: grid;
 
-            border-radius: 50%;
+      grid-template-columns:
+        repeat(4, 1fr);
+    }
 
-            border: 1px solid rgba(201,164,92,0.25);
+    .trust-item {
+      text-align: center;
 
-            right: -180px;
-            top: -180px;
-        }
+      padding: 25px 18px;
 
+      border-right:
+        1px solid rgba(11,31,51,0.12);
+    }
 
-        .hero-content {
+    .trust-item:last-child {
+      border-right: none;
+    }
 
-            max-width: 900px;
+    .trust-number {
+      display: block;
 
-            color: var(--white);
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-            position: relative;
+      color: var(--gold);
 
-            z-index: 2;
-        }
+      font-size: 27px;
 
+      font-weight: 700;
+    }
 
-        .hero-kicker {
+    .trust-label {
+      font-size: 12px;
 
-            display: inline-block;
+      text-transform: uppercase;
 
-            padding: 8px 20px;
+      letter-spacing: 0.08em;
 
-            margin-bottom: 25px;
+      font-weight: 700;
+    }
 
-            border: 1px solid var(--gold);
+    /* =========================================
+       GENERAL SECTIONS
+    ========================================= */
 
-            border-radius: 30px;
+    section {
+      padding: 100px 0;
+    }
 
-            color: var(--gold);
+    .section-kicker {
+      color: var(--gold);
 
-            font-size: 13px;
+      text-transform: uppercase;
 
-            font-weight: bold;
+      letter-spacing: 0.16em;
 
-            letter-spacing: 2px;
+      font-size: 12px;
 
-            text-transform: uppercase;
-        }
+      font-weight: 700;
 
+      margin-bottom: 12px;
+    }
 
-        .hero h1 {
+    .section-title {
+      font-size: clamp(35px, 5vw, 54px);
 
-            font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.12;
 
-            line-height: 1.1;
+      margin-bottom: 22px;
+    }
 
-            margin-bottom: 25px;
+    .section-intro {
+      color: var(--muted);
 
-            letter-spacing: -1px;
-        }
+      max-width: 720px;
 
+      font-size: 16px;
+    }
 
-        .hero h1 span {
+    /* =========================================
+       ABOUT
+    ========================================= */
 
-            color: var(--gold);
-        }
+    .about {
+      background: var(--navy);
 
+      position: relative;
+    }
 
-        .hero p {
+    .about-layout {
+      display: grid;
 
-            max-width: 760px;
+      grid-template-columns:
+        0.85fr 1.15fr;
 
-            margin: auto;
+      gap: 80px;
 
-            margin-bottom: 38px;
+      align-items: center;
+    }
 
-            font-size: 21px;
+    .about-visual {
+      min-height: 480px;
 
-            color: rgba(255,255,255,0.86);
-        }
+      position: relative;
 
+      overflow: hidden;
 
-        /* BUTTON */
+      border:
+        1px solid var(--line);
 
-        .button {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(201,164,92,0.10),
+          transparent 45%
+        ),
+        rgba(255,255,255,0.02);
+    }
 
-            display: inline-flex;
+    .about-visual::before {
+      content: "HA";
 
-            align-items: center;
-            justify-content: center;
+      position: absolute;
 
-            gap: 8px;
+      right: -10px;
+      bottom: -55px;
 
-            padding: 14px 27px;
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-            margin: 5px;
+      font-size: 190px;
 
-            border-radius: 5px;
+      color:
+        rgba(201,164,92,0.07);
+    }
 
-            text-decoration: none;
+    .blueprint {
+      position: absolute;
 
-            font-weight: bold;
+      inset: 38px;
 
-            background: var(--gold);
+      border:
+        1px solid rgba(201,164,92,0.25);
+    }
 
-            color: var(--navy);
+    .blueprint::before,
+    .blueprint::after {
+      content: "";
 
-            border: 1px solid var(--gold);
+      position: absolute;
 
-            transition: 0.25s ease;
-        }
+      background: var(--gold);
 
+      opacity: 0.35;
+    }
 
-        .button:hover {
+    .blueprint::before {
+      width: 1px;
+      height: 100%;
+      left: 33%;
+    }
 
-            background: var(--white);
+    .blueprint::after {
+      height: 1px;
+      width: 100%;
+      top: 58%;
+    }
 
-            border-color: var(--white);
+    .house-outline {
+      position: absolute;
 
-            transform: translateY(-2px);
-        }
+      left: 20%;
+      right: 16%;
 
+      top: 24%;
 
-        .button-outline {
+      height: 210px;
 
-            background: transparent;
+      border:
+        2px solid var(--gold);
 
-            color: var(--white);
+      border-top: 0;
+    }
 
-            border-color: var(--gold);
-        }
+    .house-outline::before {
+      content: "";
 
+      position: absolute;
 
-        .button-outline:hover {
+      left: 8%;
+      right: 8%;
 
-            background: var(--gold);
+      top: -91px;
 
-            color: var(--navy);
+      height: 160px;
 
-            border-color: var(--gold);
-        }
+      border-left:
+        2px solid var(--gold);
 
+      border-top:
+        2px solid var(--gold);
 
-        /* =========================================
-           GENERAL SECTIONS
-        ========================================= */
+      transform:
+        rotate(45deg)
+        skew(-8deg,-8deg);
+    }
 
-        section {
+    .about-badge {
+      position: absolute;
 
-            padding: 90px 6%;
-        }
+      left: 28px;
+      bottom: 28px;
 
+      max-width: 220px;
 
-        .container {
+      padding: 18px 22px;
 
-            max-width: 1120px;
+      background: var(--gold);
 
-            margin: auto;
-        }
+      color: var(--navy);
 
+      font-weight: 800;
 
-        .section-title {
+      line-height: 1.4;
+    }
 
-            text-align: center;
+    .about-copy {
+      color: #D1DAE3;
 
-            margin-bottom: 50px;
-        }
+      font-size: 17px;
+    }
 
+    .about-copy strong {
+      color: var(--white);
+    }
 
-        .section-title h2 {
+    .signature {
+      margin-top: 30px;
 
-            font-size: clamp(30px, 4vw, 43px);
+      color: var(--gold-light);
 
-            color: var(--navy);
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-            line-height: 1.2;
+      font-size: 23px;
+    }
 
-            margin-bottom: 12px;
-        }
+    /* =========================================
+       SERVICES
+    ========================================= */
 
+    .services {
+      background: var(--ivory);
 
-        .section-title p {
+      color: var(--navy);
+    }
 
-            color: var(--muted);
+    .services .section-intro {
+      color: #566575;
+    }
 
-            font-size: 17px;
-        }
+    .services-grid {
+      margin-top: 48px;
 
+      display: grid;
 
-        .section-title::after {
+      grid-template-columns:
+        repeat(3, 1fr);
 
-            content: "";
+      gap: 18px;
+    }
 
-            display: block;
+    .service-card {
+      position: relative;
 
-            width: 60px;
+      min-height: 260px;
 
-            height: 3px;
+      padding: 30px;
 
-            background: var(--gold);
+      background: var(--white);
 
-            margin: 18px auto 0;
+      border:
+        1px solid rgba(11,31,51,0.09);
 
-            border-radius: 5px;
-        }
+      overflow: hidden;
 
+      transition:
+        0.3s ease;
+    }
 
-        /* =========================================
-           ABOUT
-        ========================================= */
+    .service-card:hover {
+      transform: translateY(-6px);
 
-        .about {
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.16);
+    }
 
-            background: var(--ivory);
-        }
+    .service-card::after {
+      content: "";
 
+      position: absolute;
 
-        .about-text {
+      width: 100px;
+      height: 100px;
 
-            max-width: 920px;
+      right: -48px;
+      bottom: -48px;
 
-            margin: auto;
+      border:
+        1px solid rgba(201,164,92,0.35);
 
-            font-size: 18px;
+      border-radius: 50%;
+    }
 
-            color: #455563;
-        }
+    .service-number {
+      color: var(--gold);
 
+      font-size: 13px;
 
-        .about-text p {
+      font-weight: 800;
 
-            margin-bottom: 22px;
-        }
+      letter-spacing: 0.12em;
+    }
 
+    .service-icon {
+      width: 52px;
+      height: 52px;
 
-        .about-text strong {
+      display: grid;
+      place-items: center;
 
-            color: var(--navy);
-        }
+      margin: 18px 0;
 
+      border:
+        1px solid rgba(201,164,92,0.55);
 
-        .about-highlight {
+      color: var(--gold);
 
-            margin-top: 35px;
+      font-size: 24px;
+    }
 
-            padding: 30px;
+    .service-card h3 {
+      font-size: 25px;
 
-            background: var(--white);
+      margin-bottom: 9px;
+    }
 
-            border-left: 5px solid var(--gold);
+    .service-card p {
+      color: #667586;
 
-            border-radius: 8px;
+      font-size: 14px;
+    }
 
-            box-shadow: var(--shadow);
+    /* =========================================
+       INSTAGRAM
+    ========================================= */
 
-            color: var(--navy);
+    .social {
+      background:
+        radial-gradient(
+          circle at 80% 50%,
+          rgba(201,164,92,0.12),
+          transparent 27%
+        ),
+        var(--navy-light);
 
-            font-size: 19px;
-        }
+      text-align: center;
 
+      position: relative;
 
-        /* =========================================
-           SERVICES
-        ========================================= */
+      overflow: hidden;
+    }
 
-        .services {
+    .social::before {
+      content: "";
 
-            background: var(--navy);
+      position: absolute;
 
-            color: var(--white);
-        }
+      width: 420px;
+      height: 420px;
 
+      left: -180px;
+      top: -100px;
 
-        .services .section-title h2 {
+      border:
+        1px solid rgba(201,164,92,0.12);
 
-            color: var(--white);
-        }
+      border-radius: 50%;
+    }
 
+    .instagram-box {
+      position: relative;
 
-        .services .section-title p {
+      z-index: 2;
 
-            color: rgba(255,255,255,0.72);
-        }
+      width: min(700px, 100%);
 
+      margin: auto;
 
-        .service-grid {
+      padding: 60px 30px;
 
-            display: grid;
+      border:
+        1px solid var(--line);
 
-            grid-template-columns: repeat(3, 1fr);
+      background:
+        rgba(7,22,36,0.35);
+    }
 
-            gap: 25px;
-        }
+    .instagram-icon {
+      width: 70px;
+      height: 70px;
 
+      margin: 0 auto 23px;
 
-        .service {
+      display: grid;
+      place-items: center;
 
-            padding: 32px;
+      border:
+        2px solid var(--gold);
 
-            background: rgba(255,255,255,0.035);
+      border-radius: 20px;
 
-            border: 1px solid rgba(201,164,92,0.30);
+      color: var(--gold-light);
+    }
 
-            border-radius: 10px;
+    .instagram-box h2 {
+      font-size: 44px;
 
-            transition: 0.3s ease;
-        }
+      margin-bottom: 9px;
+    }
 
+    .instagram-handle {
+      color: var(--gold-light);
 
-        .service:hover {
+      font-size: 13px;
 
-            transform: translateY(-6px);
+      font-weight: 800;
 
-            border-color: var(--gold);
+      letter-spacing: 0.12em;
 
-            background: rgba(201,164,92,0.07);
-        }
+      text-transform: uppercase;
 
+      margin-bottom: 28px;
+    }
 
-        .service-number {
+    /* =========================================
+       CONTACT
+    ========================================= */
 
-            color: var(--gold);
+    .contact {
+      background: var(--ivory);
 
-            font-size: 14px;
+      color: var(--navy);
+    }
 
-            font-weight: bold;
+    .contact-layout {
+      display: grid;
 
-            letter-spacing: 2px;
+      grid-template-columns:
+        1fr 1fr;
 
-            margin-bottom: 15px;
-        }
+      gap: 70px;
 
+      align-items: start;
+    }
 
-        .service-icon {
+    .contact .section-intro {
+      color: #566575;
+    }
 
-            width: 52px;
-            height: 52px;
+    .contact-card {
+      position: relative;
 
-            display: grid;
+      overflow: hidden;
 
-            place-items: center;
+      padding: 40px;
 
-            border: 1px solid rgba(201,164,92,0.45);
+      background: var(--navy);
 
-            border-radius: 10px;
+      color: var(--white);
 
-            color: var(--gold);
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.22);
+    }
 
-            font-size: 24px;
+    .contact-card::after {
+      content: "";
 
-            margin-bottom: 18px;
-        }
+      position: absolute;
 
+      width: 190px;
+      height: 190px;
 
-        .service h3 {
+      right: -80px;
+      top: -80px;
 
-            color: var(--white);
+      border:
+        1px solid rgba(201,164,92,0.20);
 
-            font-size: 20px;
+      border-radius: 50%;
+    }
 
-            margin-bottom: 10px;
-        }
+    .contact-card h3 {
+      font-size: 30px;
 
+      margin-bottom: 26px;
+    }
 
-        .service p {
+    .contact-row {
+      position: relative;
 
-            color: rgba(255,255,255,0.72);
-        }
+      z-index: 2;
 
+      display: grid;
 
-        /* =========================================
-           INSTAGRAM
-        ========================================= */
+      grid-template-columns: 42px 1fr;
 
-        .instagram-section {
+      gap: 15px;
 
-            background: var(--white);
+      margin: 21px 0;
+    }
 
-            text-align: center;
-        }
+    .contact-symbol {
+      width: 42px;
+      height: 42px;
 
+      display: grid;
+      place-items: center;
 
-        .instagram-card {
+      border:
+        1px solid var(--line);
 
-            max-width: 780px;
+      color: var(--gold-light);
+    }
 
-            margin: auto;
+    .contact-row small {
+      display: block;
 
-            padding: 45px 35px;
+      color: var(--muted);
 
-            background: var(--ivory);
+      font-size: 11px;
 
-            border: 1px solid rgba(201,164,92,0.35);
+      text-transform: uppercase;
 
-            border-radius: 14px;
+      letter-spacing: 0.1em;
 
-            box-shadow: var(--shadow);
-        }
+      margin-bottom: 3px;
+    }
 
+    .contact-row a:hover {
+      color: var(--gold-light);
+    }
 
-        .instagram-large {
+    /* =========================================
+       FOOTER
+    ========================================= */
 
-            width: 65px;
-            height: 65px;
+    footer {
+      background: var(--navy-dark);
 
-            margin: auto;
+      border-top:
+        1px solid var(--line);
 
-            display: grid;
+      padding: 35px 0;
+    }
 
-            place-items: center;
+    .footer-inner {
+      display: flex;
 
-            border: 2px solid var(--gold);
+      align-items: center;
 
-            border-radius: 17px;
+      justify-content: space-between;
 
-            color: var(--gold);
-        }
+      gap: 20px;
+    }
 
+    .footer-logo {
+      width: 150px;
 
-        .instagram-large svg {
+      opacity: 0.9;
+    }
 
-            width: 34px;
-            height: 34px;
+    .copyright {
+      color: var(--muted);
 
-            fill: currentColor;
-        }
+      font-size: 12px;
+    }
 
+    /* =========================================
+       FLOATING WHATSAPP
+    ========================================= */
 
-        .instagram-card h3 {
+    .whatsapp {
+      position: fixed;
 
-            color: var(--navy);
+      right: 22px;
+      bottom: 22px;
 
-            font-size: 28px;
+      z-index: 999;
 
-            margin-top: 18px;
+      width: 59px;
+      height: 59px;
 
-            margin-bottom: 5px;
-        }
+      display: grid;
+      place-items: center;
 
+      border-radius: 50%;
 
-        .instagram-title {
+      background: #25D366;
 
-            color: var(--gold);
+      color: white;
 
-            font-weight: bold;
+      box-shadow:
+        0 12px 30px rgba(0,0,0,0.30);
 
-            letter-spacing: 1.5px;
+      transition: 0.3s ease;
+    }
 
-            margin-bottom: 15px;
-        }
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
 
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
 
-        .instagram-card p {
+    @media (max-width: 900px) {
 
-            color: var(--muted);
+      .nav-links {
+        display: none;
+      }
 
-            margin-bottom: 22px;
-        }
+      .about-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
 
+      .about-visual {
+        min-height: 400px;
+      }
 
-        /* =========================================
-           CONTACT
-        ========================================= */
+      .services-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
 
-        .contact {
+      .building-art {
+        right: -80px;
+        opacity: 0.16;
+      }
+    }
 
-            background: var(--ivory);
-        }
+    @media (max-width: 600px) {
 
+      .container {
+        width:
+          calc(100% - 28px);
+      }
 
-        .contact-grid {
+      .nav {
+        min-height: 74px;
+      }
 
-            display: grid;
+      .brand img {
+        width: 135px;
+      }
 
-            grid-template-columns: 1fr 1fr;
+      .hero {
+        min-height: 650px;
+      }
 
-            gap: 30px;
-        }
+      .hero-content {
+        padding:
+          75px 0 105px;
+      }
 
+      .hero-copy {
+        font-size: 16px;
+      }
 
-        .contact-box {
+      .trust-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
 
-            background: var(--white);
+      .trust-item {
+        border-bottom:
+          1px solid rgba(11,31,51,0.12);
+      }
 
-            padding: 38px;
+      .trust-item:nth-child(2),
+      .trust-item:nth-child(4) {
+        border-right: none;
+      }
 
-            border-radius: 10px;
+      section {
+        padding: 75px 0;
+      }
 
-            box-shadow: var(--shadow);
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
 
-            border-top: 3px solid var(--gold);
-        }
+      .about-visual {
+        min-height: 350px;
+      }
 
+      .house-outline {
+        transform: scale(0.78);
 
-        .contact-box h3 {
+        transform-origin: center;
+      }
 
-            color: var(--navy);
+      .instagram-box h2 {
+        font-size: 34px;
+      }
 
-            font-size: 23px;
+      .contact-card {
+        padding: 30px 24px;
+      }
 
-            margin-bottom: 22px;
-        }
+      .footer-inner {
+        flex-direction: column;
 
-
-        .contact-box p {
-
-            margin-bottom: 18px;
-        }
-
-
-        .contact-box a {
-
-            color: var(--navy);
-
-            text-decoration: none;
-
-            font-weight: 600;
-        }
-
-
-        .contact-box a:hover {
-
-            color: var(--dark-gold);
-        }
-
-
-        .contact-label {
-
-            color: var(--gold);
-
-            font-size: 13px;
-
-            font-weight: bold;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
-        }
-
-
-        .address {
-
-            line-height: 1.9;
-        }
-
-
-        .contact-button {
-
-            margin-top: 10px;
-        }
-
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
-        footer {
-
-            background: var(--navy);
-
-            color: rgba(255,255,255,0.68);
-
-            text-align: center;
-
-            padding: 35px 20px;
-        }
-
-
-        footer strong {
-
-            color: var(--gold);
-        }
-
-
-        footer p {
-
-            margin-bottom: 5px;
-        }
-
-
-        /* =========================================
-           FLOATING WHATSAPP
-        ========================================= */
-
-        .whatsapp {
-
-            position: fixed;
-
-            right: 22px;
-
-            bottom: 22px;
-
-            width: 60px;
-
-            height: 60px;
-
-            background: #25D366;
-
-            color: var(--white);
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-decoration: none;
-
-            font-size: 28px;
-
-            box-shadow: 0 5px 20px rgba(0,0,0,0.30);
-
-            z-index: 2000;
-
-            transition: 0.25s ease;
-        }
-
-
-        .whatsapp:hover {
-
-            transform: scale(1.08);
-        }
-
-
-        /* =========================================
-           MOBILE
-        ========================================= */
-
-        @media (max-width: 850px) {
-
-            header {
-
-                padding: 12px 4%;
-            }
-
-
-            .nav {
-
-                flex-direction: column;
-
-                gap: 12px;
-            }
-
-
-            .brand img {
-
-                width: 190px;
-            }
-
-
-            nav {
-
-                flex-wrap: wrap;
-
-                justify-content: center;
-
-                gap: 10px 17px;
-            }
-
-
-            nav a {
-
-                font-size: 12px;
-            }
-
-
-            .hero {
-
-                min-height: 620px;
-            }
-
-
-            .hero h1 {
-
-                font-size: 42px;
-            }
-
-
-            .hero p {
-
-                font-size: 18px;
-            }
-
-
-            .service-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .contact-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            section {
-
-                padding: 70px 5%;
-            }
-        }
-
-
-        @media (max-width: 500px) {
-
-            .brand img {
-
-                width: 175px;
-            }
-
-
-            .hero h1 {
-
-                font-size: 37px;
-            }
-
-
-            .hero-kicker {
-
-                font-size: 11px;
-
-                letter-spacing: 1.3px;
-            }
-
-
-            .button {
-
-                width: 100%;
-
-                max-width: 310px;
-            }
-
-
-            .instagram-card,
-            .contact-box {
-
-                padding: 28px 22px;
-            }
-
-
-            .whatsapp {
-
-                width: 55px;
-
-                height: 55px;
-
-                right: 15px;
-
-                bottom: 15px;
-            }
-        }
-
-    </style>
-
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================================
+       HEADER
+  ========================================= -->
 
-<!-- =========================================
-     HEADER
-========================================= -->
+  <header>
 
-<header>
+    <div class="container nav">
 
-    <div class="nav">
+      <a
+        href="#home"
+        class="brand"
+        aria-label="Hectare Acre Real Estate"
+      >
 
+        <img
+          src="logo.png"
+          alt="Hectare Acre Real Estate Logo"
+        >
 
-        <!-- LOGO -->
+      </a>
 
-        <a href="#home"
-           class="brand"
-           aria-label="Hectare Acre Real Estate">
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
 
-            <!--
-                IMPORTANT:
-                Keep LOGO-Hectare-Acre.png
-                in the same GitHub folder as index.html
-            -->
+        <a href="#home">Home</a>
 
-            <img src="LOGO-Hectare-Acre.png"
-                 alt="Hectare Acre Real Estate Logo">
+        <a href="#about">About</a>
 
+        <a href="#services">Services</a>
+
+        <a href="#instagram">Instagram</a>
+
+        <a
+          href="#contact"
+          class="nav-cta"
+        >
+          Contact
         </a>
 
-
-        <!-- NAVIGATION -->
-
-        <nav>
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#instagram">
-                Instagram
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-
-            <!-- INSTAGRAM -->
-
-            <!--
-                IMPORTANT:
-                Replace https://www.instagram.com/
-                with your actual Instagram profile URL.
-            -->
-
-            <a href="https://www.instagram.com/"
-               class="nav-instagram"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Follow Realtor of Travancore on Instagram">
-
-                <svg class="instagram-icon"
-                     viewBox="0 0 24 24"
-                     aria-hidden="true">
-
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6.25a1.25 1.25 0 1 1-1.25 1.25z"/>
-
-                </svg>
-
-                Follow Us
-
-            </a>
-
-        </nav>
+      </nav>
 
     </div>
 
-</header>
+  </header>
 
 
+  <main>
 
-<!-- =========================================
-     HOME / HERO
-========================================= -->
+    <!-- =========================================
+         HERO
+    ========================================= -->
 
-<section class="hero"
-         id="home">
+    <section
+      class="hero"
+      id="home"
+    >
 
-    <div class="hero-content">
+      <div class="hero-grid"></div>
+
+      <div class="hero-ring"></div>
 
 
-        <div class="hero-kicker">
+      <!-- Decorative buildings -->
 
-            Hectare Acre Real Estate
+      <div
+        class="building-art"
+        aria-hidden="true"
+      >
 
+        <span class="b1"></span>
+
+        <span class="b2"></span>
+
+        <span class="b3"></span>
+
+        <span class="b4"></span>
+
+        <i style="left:45px;bottom:95px;"></i>
+
+        <i style="left:132px;bottom:160px;"></i>
+
+        <i style="left:235px;bottom:210px;"></i>
+
+        <i style="left:325px;bottom:135px;"></i>
+
+      </div>
+
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">
+          Hectare Acre Real Estate
         </div>
 
 
         <h1>
-
-            Kerala's
-            <span>
-                Verified Property Network
-            </span>
-
+          Kerala's
+          <span>Verified</span>
+          <br>
+          Property Network
         </h1>
 
 
-        <p>
-
-            Trusted professional guidance for buying,
-            selling and investing in property — with
-            verification, transparency and expert support.
-
+        <p class="hero-copy">
+          Trusted support for buying, selling and investing in property —
+          with verification, professional guidance and clarity at every step.
         </p>
 
 
-        <a href="#services"
-           class="button">
+        <div class="hero-buttons">
 
+          <a
+            href="#services"
+            class="btn btn-gold"
+          >
             Explore Our Services
+          </a>
 
-        </a>
+
+          <a
+            href="#contact"
+            class="btn btn-outline"
+          >
+            Talk to Our Team
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
-        <a href="https://wa.me/919446400796"
-           class="button button-outline"
-           target="_blank"
-           rel="noopener noreferrer">
+    <!-- =========================================
+         TRUST BAR
+    ========================================= -->
 
-            WhatsApp Us
+    <div class="trust">
 
-        </a>
+      <div class="container trust-grid">
 
+        <div class="trust-item">
+
+          <span class="trust-number">
+            01
+          </span>
+
+          <span class="trust-label">
+            Verified Properties
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            02
+          </span>
+
+          <span class="trust-label">
+            Professional Guidance
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            03
+          </span>
+
+          <span class="trust-label">
+            NRI Support
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            04
+          </span>
+
+          <span class="trust-label">
+            End-to-End Assistance
+          </span>
+
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+
+    <!-- =========================================
+         ABOUT
+    ========================================= -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+      <div class="container about-layout">
 
 
+        <!-- Decorative real estate graphic -->
 
-<!-- =========================================
-     ABOUT
-========================================= -->
+        <div
+          class="about-visual"
+          aria-hidden="true"
+        >
 
-<section class="about"
-         id="about">
+          <div class="blueprint"></div>
 
-    <div class="container">
+          <div class="house-outline"></div>
 
-
-        <div class="section-title">
-
-            <h2>
-                Real Estate Decisions Made With Confidence
-            </h2>
-
-            <p>
-                Trusted guidance. Verified opportunities. Professional support.
-            </p>
-
-        </div>
-
-
-        <div class="about-text">
-
-
-            <p>
-
-                At <strong>Hectare Acre Real Estate</strong>,
-                we believe that buying, selling, or investing
-                in property should be a confident and rewarding
-                experience—not a complicated one.
-
-            </p>
-
-
-            <p>
-
-                With the support of
-                <strong>experienced real estate professionals</strong>,
-                we provide end-to-end assistance to help you find
-                the right property, achieve the right value, and
-                make informed investment decisions.
-
-                From
-                <strong>
-                    verified property listings and property evaluation
-                </strong>
-                to
-                <strong>
-                    document verification, legal support,
-                    and transaction guidance
-                </strong>,
-                we take care of the details that matter.
-
-            </p>
-
-
-            <p>
-
-                For <strong>NRI clients</strong>,
-                we offer dedicated property support and professional
-                guidance, making it easier to explore, manage, buy,
-                sell, or invest in property in India—even from overseas.
-
-            </p>
-
-
-            <p>
-
-                Whether you're searching for your dream home,
-                selling a valuable property, or looking for a smart
-                real estate investment, our approach is built on
-                <strong>
-                    trust, transparency, verification,
-                    and professional expertise
-                </strong>.
-
-            </p>
-
-
-            <div class="about-highlight">
-
-                <strong>
-                    Buy with confidence.
-                    Sell with clarity.
-                    Invest with confidence.
-                </strong>
-
-                <br>
-                <br>
-
-                <strong>
-                    Hectare Acre Real Estate —
-                    Your trusted partner for smarter property decisions.
-                </strong>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
-     SERVICES
-========================================= -->
-
-<section class="services"
-         id="services">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2>
-                Our Services
-            </h2>
-
-            <p>
-                Everything you need to make smarter, safer
-                and more confident property decisions.
-            </p>
+          <div class="about-badge">
+            Trust • Transparency • Verification
+          </div>
 
         </div>
 
 
-        <div class="service-grid">
+        <div>
+
+          <div class="section-kicker">
+            About Hectare Acre
+          </div>
 
 
-            <!-- SERVICE 1 -->
+          <h2 class="section-title">
+            Real Estate Decisions Made With Confidence
+          </h2>
 
-            <div class="service">
 
-                <div class="service-number">
-                    01
-                </div>
+          <div class="about-copy">
 
-                <div class="service-icon">
-                    ⌂
-                </div>
+            <p>
+              At <strong>Hectare Acre Real Estate</strong>, we make buying,
+              selling, and investing in property simple, transparent, and secure.
+            </p>
 
-                <h3>
-                    Buy Property
-                </h3>
 
-                <p>
-                    Find the right property with confidence.
-                </p>
+            <br>
 
+
+            <p>
+              With <strong>verified property listings, professional property
+              evaluation, document verification, legal support, and end-to-end
+              transaction assistance</strong>, we help you make informed real
+              estate decisions with confidence.
+            </p>
+
+
+            <br>
+
+
+            <p>
+              We also provide dedicated <strong>NRI property services</strong>,
+              offering trusted support for clients managing their property needs
+              from overseas.
+            </p>
+
+
+            <br>
+
+
+            <p>
+              <strong>
+                Buy with confidence. Sell with clarity. Invest with vision.
+              </strong>
+            </p>
+
+
+            <div class="signature">
+              Your trusted partner for smarter property decisions.
             </div>
 
-
-            <!-- SERVICE 2 -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    02
-                </div>
-
-                <div class="service-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    Sell Property
-                </h3>
-
-                <p>
-                    Professional marketing, valuation
-                    &amp; buyer support.
-                </p>
-
-            </div>
-
-
-            <!-- SERVICE 3 -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    03
-                </div>
-
-                <div class="service-icon">
-                    ◈
-                </div>
-
-                <h3>
-                    Real Estate Investment
-                </h3>
-
-                <p>
-                    Smart property opportunities
-                    &amp; investment guidance.
-                </p>
-
-            </div>
-
-
-            <!-- SERVICE 4 -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    04
-                </div>
-
-                <div class="service-icon">
-                    ◎
-                </div>
-
-                <h3>
-                    NRI Property Services
-                </h3>
-
-                <p>
-                    Complete support for NRI property needs.
-                </p>
-
-            </div>
-
-
-            <!-- SERVICE 5 -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    05
-                </div>
-
-                <div class="service-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Property Verification
-                </h3>
-
-                <p>
-                    Document, ownership &amp;
-                    due-diligence checks.
-                </p>
-
-            </div>
-
-
-            <!-- SERVICE 6 -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    06
-                </div>
-
-                <div class="service-icon">
-                    ▣
-                </div>
-
-                <h3>
-                    Legal &amp; Transaction Support
-                </h3>
-
-                <p>
-                    Professional legal, documentation
-                    &amp; registration assistance.
-                </p>
-
-            </div>
-
+          </div>
 
         </div>
 
-    </div>
+      </div>
 
-</section>
-
-
-
-<!-- =========================================
-     INSTAGRAM
-========================================= -->
-
-<section class="instagram-section"
-         id="instagram">
-
-    <div class="container">
+    </section>
 
 
-        <div class="instagram-card">
+    <!-- =========================================
+         SERVICES
+    ========================================= -->
+
+    <section
+      class="services"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-kicker">
+          What We Do
+        </div>
 
 
-            <div class="instagram-large">
+        <h2 class="section-title">
+          Our Services
+        </h2>
 
-                <svg viewBox="0 0 24 24"
-                     aria-hidden="true">
 
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6.25a1.25 1.25 0 1 1-1.25 1.25z"/>
+        <p class="section-intro">
+          Everything you need to make smarter, safer and more confident
+          property decisions.
+        </p>
 
-                </svg>
 
+        <div class="services-grid">
+
+
+          <!-- Service 01 -->
+
+          <article class="service-card">
+
+            <div class="service-number">
+              01 / BUY
             </div>
 
+            <div class="service-icon">
+              ⌂
+            </div>
 
             <h3>
-                Follow Us
+              Buy Property
             </h3>
 
-
-            <div class="instagram-title">
-                REALTOR OF TRAVANCORE
-            </div>
-
-
             <p>
-
-                Follow Hectare Acre Real Estate on Instagram
-                for property updates, real estate opportunities
-                and latest updates.
-
+              Find the right property with confidence.
             </p>
 
-
-            <!--
-                Replace the URL below with your
-                actual Instagram profile URL.
-            -->
-
-            <a href="https://www.instagram.com/"
-               class="button"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                Follow on Instagram
-
-            </a>
+          </article>
 
 
-        </div>
+          <!-- Service 02 -->
 
-    </div>
+          <article class="service-card">
 
-</section>
+            <div class="service-number">
+              02 / SELL
+            </div>
 
+            <div class="service-icon">
+              ↗
+            </div>
 
-
-<!-- =========================================
-     CONTACT
-========================================= -->
-
-<section class="contact"
-         id="contact">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2>
-                Contact Us
-            </h2>
+            <h3>
+              Sell Property
+            </h3>
 
             <p>
-                Let's make your next property decision with confidence.
+              Professional marketing, valuation &amp; buyer support.
             </p>
 
-        </div>
+          </article>
 
 
-        <div class="contact-grid">
+          <!-- Service 03 -->
 
+          <article class="service-card">
 
-            <!-- CONTACT INFORMATION -->
-
-            <div class="contact-box">
-
-
-                <h3>
-                    Hectare Acre Real Estate
-                </h3>
-
-
-                <p class="address">
-
-                    <span class="contact-label">
-                        Address
-                    </span>
-
-                    <br>
-
-                    Moolekkarayil Complex
-                    <br>
-
-                    Vengallore–Kolani Bypass
-                    <br>
-
-                    Thodupuzha, Kerala – 685608
-                    <br>
-
-                    India
-
-                </p>
-
-
-                <p>
-
-                    <span class="contact-label">
-                        WhatsApp
-                    </span>
-
-                    <br>
-
-                    <a href="https://wa.me/919446400796"
-                       target="_blank"
-                       rel="noopener noreferrer">
-
-                        +91 9446400796
-
-                    </a>
-
-                    <br>
-
-                    <a href="https://wa.me/916238450261"
-                       target="_blank"
-                       rel="noopener noreferrer">
-
-                        +91 6238450261
-
-                    </a>
-
-                </p>
-
-
-                <p>
-
-                    <span class="contact-label">
-                        Email
-                    </span>
-
-                    <br>
-
-                    <a href="mailto:sales@hectareacrerealestate.com">
-
-                        sales@hectareacrerealestate.com
-
-                    </a>
-
-                </p>
-
-
+            <div class="service-number">
+              03 / INVEST
             </div>
 
-
-
-            <!-- GET IN TOUCH -->
-
-            <div class="contact-box">
-
-
-                <h3>
-                    Get in Touch
-                </h3>
-
-
-                <p>
-
-                    Have a property to buy, sell or invest in?
-
-                    Need property verification or NRI property
-                    support?
-
-                    Contact Hectare Acre Real Estate today.
-
-                </p>
-
-
-                <a href="https://wa.me/919446400796"
-                   class="button contact-button"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    💬 WhatsApp 9446400796
-
-                </a>
-
-
-                <a href="https://wa.me/916238450261"
-                   class="button contact-button"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    💬 WhatsApp 6238450261
-
-                </a>
-
-
-                <a href="mailto:sales@hectareacrerealestate.com"
-                   class="button button-outline contact-button"
-                   style="color:#0B1F33; border-color:#0B1F33;">
-
-                    ✉ Email Us
-
-                </a>
-
-
+            <div class="service-icon">
+              ◈
             </div>
+
+            <h3>
+              Real Estate Investment
+            </h3>
+
+            <p>
+              Smart property opportunities &amp; investment guidance.
+            </p>
+
+          </article>
+
+
+          <!-- Service 04 -->
+
+          <article class="service-card">
+
+            <div class="service-number">
+              04 / NRI
+            </div>
+
+            <div class="service-icon">
+              ◎
+            </div>
+
+            <h3>
+              NRI Property Services
+            </h3>
+
+            <p>
+              Complete support for NRI property needs.
+            </p>
+
+          </article>
+
+
+          <!-- Service 05 -->
+
+          <article class="service-card">
+
+            <div class="service-number">
+              05 / VERIFY
+            </div>
+
+            <div class="service-icon">
+              ✓
+            </div>
+
+            <h3>
+              Property Verification
+            </h3>
+
+            <p>
+              Document, ownership &amp; due-diligence checks.
+            </p>
+
+          </article>
+
+
+          <!-- Service 06 -->
+
+          <article class="service-card">
+
+            <div class="service-number">
+              06 / SUPPORT
+            </div>
+
+            <div class="service-icon">
+              §
+            </div>
+
+            <h3>
+              Legal &amp; Transaction Support
+            </h3>
+
+            <p>
+              Professional legal, documentation &amp; registration assistance.
+            </p>
+
+          </article>
 
 
         </div>
 
-    </div>
+      </div>
 
-</section>
-
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer>
+    </section>
 
 
-    <p>
+    <!-- =========================================
+         INSTAGRAM
+    ========================================= -->
 
-        © 2026
-        <strong>
+    <section
+      class="social"
+      id="instagram"
+    >
+
+      <div class="container">
+
+        <div class="instagram-box">
+
+
+          <div class="instagram-icon">
+
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+            >
+
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+              ></rect>
+
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+              ></circle>
+
+              <circle
+                cx="17.4"
+                cy="6.7"
+                r="1"
+              ></circle>
+
+            </svg>
+
+          </div>
+
+
+          <div class="section-kicker">
+            Follow Us
+          </div>
+
+
+          <h2>
+            REALTOR OF TRAVANCORE
+          </h2>
+
+
+          <div class="instagram-handle">
             Hectare Acre Real Estate
-        </strong>
-
-        . All Rights Reserved.
-
-    </p>
+          </div>
 
 
-    <p>
+          <!--
+            IMPORTANT:
+            Replace # below with your real Instagram profile URL.
+          -->
 
-        Kerala's Verified Property Network
-
-        ·
-
-        Thodupuzha, Kerala
-
-    </p>
-
-
-</footer>
-
-
-
-<!-- =========================================
-     FLOATING WHATSAPP
-========================================= -->
-
-<a href="https://wa.me/919446400796"
-   class="whatsapp"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat with Hectare Acre Real Estate on WhatsApp">
-
-    💬
-
-</a>
+          <a
+            href="#"
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener"
+          >
+            Follow on Instagram
+          </a>
 
 
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="container contact-layout">
+
+
+        <div>
+
+          <div class="section-kicker">
+            Get In Touch
+          </div>
+
+
+          <h2 class="section-title">
+            Let's Make Your Next Property Decision Smarter.
+          </h2>
+
+
+          <p class="section-intro">
+            Whether you're buying, selling, investing or managing property
+            from overseas, our team is ready to help.
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+
+          <h3>
+            Hectare Acre Real Estate
+          </h3>
+
+
+          <!-- Address -->
+
+          <div class="contact-row">
+
+            <div class="contact-symbol">
+              ⌖
+            </div>
+
+            <div>
+
+              <small>
+                Office
+              </small>
+
+              Moolekkarayil Complex
+              <br>
+
+              Vengallore–Kolani Bypass
+              <br>
+
+              Thodupuzha, Kerala – 685608
+              <br>
+
+              India
+
+            </div>
+
+          </div>
+
+
+          <!-- WhatsApp -->
+
+          <div class="contact-row">
+
+            <div class="contact-symbol">
+              ☎
+            </div>
+
+            <div>
+
+              <small>
+                WhatsApp
+              </small>
+
+
+              <a
+                href="https://wa.me/919446400796"
+                target="_blank"
+                rel="noopener"
+              >
+                +91 9446400796
+              </a>
+
+              <br>
+
+
+              <a
+                href="https://wa.me/916238450261"
+                target="_blank"
+                rel="noopener"
+              >
+                +91 6238450261
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- Email -->
+
+          <div class="contact-row">
+
+            <div class="contact-symbol">
+              ✉
+            </div>
+
+            <div>
+
+              <small>
+                Email
+              </small>
+
+
+              <a
+                href="mailto:sales@hectareacrerealestate.com"
+              >
+                sales@hectareacrerealestate.com
+              </a>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <img
+        class="footer-logo"
+        src="logo.png"
+        alt="Hectare Acre Real Estate"
+      >
+
+
+      <div class="copyright">
+
+        © 2026 Hectare Acre Real Estate.
+        All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       FLOATING WHATSAPP BUTTON
+  ========================================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/919446400796"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Hectare Acre Real Estate on WhatsApp"
+  >
+
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+
+      <path
+        d="M20 11.5a8.3 8.3 0 0 1-12.7 7.1L4 20l1.4-3.2A8.3 8.3 0 1 1 20 11.5Z"
+      ></path>
+
+      <path
+        d="M8.7 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c.7 1.2 1.7 2.1 2.9 2.7l.6-.7c.2-.2.4-.2.7-.1l1.5.7c.3.1.4.3.3.6-.2.9-1 1.5-1.8 1.5-3.6-.2-7.3-3.8-7.7-7.2-.1-.8.4-1.7 1.1-2.1Z"
+      ></path>
+
+    </svg>
+
+  </a>
 
 </body>
 </html>
